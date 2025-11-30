@@ -1,5 +1,3 @@
-
-
 html, body {
     margin: 0;
     padding: 0;
@@ -168,7 +166,7 @@ main {
 }
 
 .pictures__block {
-    display: flex;
+    display: none;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
@@ -178,56 +176,18 @@ main {
     gap: 30px;
 }
 
-/* #block1:has(#France:checked){
+.main__pictures:has(#France:checked) .pictures__block.France {
     display: flex;
-} */
+}
 
-/* #France:checked ~ #block1,
-#Germany:checked ~ #block2,
-#England:checked ~ #block3 {
-  display: flex;
-} */
+.main__pictures:has(#Germany:checked) .pictures__block.Germany {
+    display: flex;
+}
 
-/* Скрываем radio buttons */
-/* .tab-item input[type="radio"] {
-  display: none;
-} */
+.main__pictures:has(#England:checked) .pictures__block.England {
+    display: flex;
+}
 
-/* Стили для табов */
-/* .tabs-nav {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
-} */
-
-/* .tab-item {
-  background: #bcbcbc;
-  padding: 10px 20px;
-  border-radius: 6px;
-  color: #fff;
-  cursor: pointer;
-  transition: background 0.3s;
-} */
-
-/* Активный таб */
-/* .tab-item:has(input:checked) {
-  background: #007bff;
-} */
-
-/* Скрываем весь контент по умолчанию */
-/* .tab-content {
-  display: none;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-} */
-
-/* Показываем контент при активном табе */
-/* #tab1:checked ~ #content1,
-#tab2:checked ~ #content2,
-#tab3:checked ~ #content3 {
-  display: block;
-} */
 
 .card {
     width: 350px;
@@ -416,4 +376,98 @@ footer {
     color: #86928B;
     font-weight: 400;
     font-size: 20px;
+}
+
+
+
+
+
+/* For about.html */
+.about {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about__title {
+    font-weight: 700;
+    font-size: 50px;
+    color: #2C2D35;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about__me {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+.about__me-img {
+    width: 300px;
+    height: 300px;
+}
+
+.about__me-img img {
+    width: 100%;
+}
+
+.about__me-contacts {
+    list-style-type: none;
+}
+
+.contacts__item,
+.contacts__item a {
+    font-weight: 400;
+    font-size: 30px;
+    color: #86928B;
+    margin-top: 30px;
+}
+
+.contacts__item a:hover {
+    color: #598D66;
+}
+
+.contacts__item .text {
+    font-weight: 500;
+    font-size: 30px;
+    color: #2C2D35;
+}
+
+h2 {
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 40px;
+    color: #2C2D35;
+}
+
+.about__me {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 30px;
+    color: #000;
+}
+
+.about__me-skills {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.about__me-skills thead tr th {
+    padding: 10px 0;
+    text-align: center;
+    border: 1px solid #2C2D35;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.about__me-skills tbody tr td {
+    padding: 10px 0;
+    text-align: center;
+    border: 1px solid #2C2D35;
+    font-weight: 500;
+    font-size: 30px;
 }
