@@ -648,5 +648,38 @@ h2 {
    .main__container {
         max-width: 310px;
         flex-direction: column;
+        justify-content: center;
+        gap: 20px;
    } 
+
+   .main__container .main__img {
+        height: 380px;
+        width: 300px;
+    }
+
+    .main__container .main__img img {
+        width: 100%;
+    }
+
+    .pictures__block {
+        justify-content: center;
+    }
+
+    .footer {
+        max-width: 310px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 375px) {
+    .pictures__nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .pictures__nav .nav__link input {
+        padding-top: 0;
+    }
 }
